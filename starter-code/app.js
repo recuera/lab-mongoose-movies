@@ -10,12 +10,13 @@ const index = require('./routes/index');
 const users = require('./routes/users');
 const celebrities = require('./routes/celebrities');
 
+var app = express();
+
 const mongoose = require('mongoose');
 mongoose.connect("mongodb://localhost/mongoose-movies").then( () => {
   console.log("conectada a la bbdd!!")
 });
 
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
